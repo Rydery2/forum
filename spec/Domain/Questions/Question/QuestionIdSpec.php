@@ -34,7 +34,7 @@ class QuestionIdSpec extends ObjectBehavior
         $this->jsonSerialize()->shouldBe($this->uuidStr);
     }
 
-    function it_throws_an_exception_when_id_is_nopt_a_valid_uuid()
+    function it_throws_an_exception_when_id_is_not_a_valid_uuid()
     {
         $this->beConstructedWith('some-fullish-identifier');
         $this->shouldThrow(InvalidAggregateIdentifier::class)
